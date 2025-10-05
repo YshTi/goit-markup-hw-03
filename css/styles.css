@@ -314,9 +314,10 @@ body {
 
 .footer-logo {
     padding: 16px 0;
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .footer-text {
-    margin-top: 16px;
     max-width: 264px;
 }
