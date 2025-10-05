@@ -1,4 +1,38 @@
-/* Fonts for a website */
+ /* reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* common styles */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -9,7 +43,6 @@ body {
     background-color: #fff;
     color: #434455;
 }
-
 .logo {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -20,13 +53,44 @@ body {
     color: #4d5ae5;
 }
 
-.header-logo .logo-part {
-    color: #2e2f42;
+.section {
+    padding: 120px 0;
 }
 
-ul,
-ol {
-    list-style-type: none;
+/* header */
+
+.header {
+    border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.contacts-list {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    padding: 24px 0;
+    margin-right: 76px;
+}
+
+.header-logo .logo-part {
+    color: #2e2f42;
 }
 
 .nav-link {
@@ -35,10 +99,19 @@ ol {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    display: block;
+    padding: 24px 0;
 }
 
 .contacts{
     font-style: normal;
+    margin-left: auto;
+}
+
+.contacts-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .contacts-link {
@@ -46,6 +119,8 @@ ol {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    display: block;
+    padding: 24px 0;
 }
 
 .nav-link:hover,
@@ -55,21 +130,28 @@ ol {
     color: #404bbf;
 }
 
-.page-footer {
-    background-color: #2e2f42;
+/* visually hidden title */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
-.footer-logo .logo-part {
-    color: #f4f4fd;
-}
-
-.footer-text {
-    color: #f4f4fd;
-}
+/* hero section */
 
 .hero {
+    padding: 188px 0;
     background-color: #2E2F42;
     color: #FFF;
+    text-align: center;
 }
 
 .hero-title {
@@ -78,7 +160,12 @@ ol {
     line-height: 1.07;
     /* 60px / 56px */
     letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin-bottom: 48px;
+    max-width: 496px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .button{
@@ -97,14 +184,15 @@ ol {
     background-color: #404bbf;
 }
 
-.section-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    text-align: center;
-    text-transform: capitalize;
-    color: #2e2f42;
+/* benefits section */
+
+.benefits {
+    display: flex;
+    gap: 24px;
+}
+
+.benefits-item {
+    flex-basis: calc((100% - 3*24px) / 4);
 }
 
 .benefits-title {
@@ -113,14 +201,34 @@ ol {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
+/* team section */
 .team {
     background-color: #F4F4FD;
 }
 
+.section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    color: #2e2f42;
+    margin-bottom: 72px;
+}
+
+.team-list {
+    display: flex;
+    gap: 24px;
+}
+
 .team-item {
     background-color: #fff;
+    flex-basis: calc((100% - 3*24px) / 4);
+    border-radius: 0 0 4px 4px;
 }
 
 .team-name {
@@ -130,10 +238,30 @@ ol {
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .team-position {
     text-align: center;
+}
+
+.img-info {
+    padding: 32px 0;
+    text-align: center;
+}
+
+
+/* portfolio  */
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+}
+
+.portfolio-item {
+    flex-basis: calc((100% - 2*24px) / 3);
 }
 
 .portfolio-product {
@@ -142,6 +270,7 @@ ol {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .product-description {
@@ -149,4 +278,35 @@ ol {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+}
+
+.product-info {
+    padding: 32px 0 32px 16px;
+}
+
+/* footer */
+
+.page-footer {
+    background-color: #2e2f42;
+}
+
+.footer-logo .logo-part {
+    color: #f4f4fd;
+}
+
+.footer-text {
+    color: #f4f4fd;
+}
+
+.footer-container {
+    padding: 100px 0;
+}
+
+.footer-logo {
+    padding: 16px 0;
+}
+
+.footer-text {
+    margin-top: 16px;
+    max-width: 264px;
 }
